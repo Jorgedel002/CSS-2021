@@ -1,0 +1,147 @@
+/* Selectores */
+
+/* 
+ selectores simples:
+ selectores elementales:
+     selector universal -> *
+     selector de tipo o etiqueta -> nombre de la etiqueta
+ selectores de atributo
+     id -> id del elemento -> se selecciona en css con un # hashtag
+     clase -> clase del elemento -> se selecciona en css con un . Punto
+     atributos -> [atributo]
+                  [atributo=valor]
+                  [atributos^=valor]
+                  [atributo*=valor]
+                  [atributo$=valor]
+                  [atributo│=valor]
+ selectores compuestos
+ selectores agrupados
+
+     se pueden agrupar varias clases o id para dar una regla a todos los selectores que queramos
+     esto se hace separando cada selector con una "coma" ( , )
+     ej=
+     .text-1,
+     .text-2,
+     .text-3,
+     .text-4{
+         background-color: blue;
+     }
+
+ selectroes combinadores
+
+   selecciona los elementos que esten dentro de un elemento, por lo general un div articles section, para hacerlo debe separarse con espacios
+   ej=
+   div .title-2{
+       background-color: red;
+   }
+
+   se recomienda que no se debe bajar mas de dos elementos
+
+   selector de hermano: esto se hace con el signo de suma (+), se utiliza cuando esta en el mismo nivel ej: 
+           h1 + p{
+               background-color: red;
+           }
+
+           .title + .text{
+               background-color: red
+           }
+           esto solo funciona con el hermano que le sigue, es decir ej
+           <h1>titulo</h1>
+           <p>lorem ipsuom</p>
+           <h2>subtitulo</h2>
+           en este caso si quisieramos seleccionar con este metodo no podriamos seleccionar el h2 ej: (h1 + h2)
+           si quisieramos seleccionar el h2 se utiliza el ~ ej: h1 ~ h2
+
+           selector de hijo directo, si quisieramos seleccionar un hijo que esta dentro de otro contenedor padre, por ej: 
+           <div class="container">
+           
+              <div class="info">
+              
+                 <div class="noticias">
+                 
+                 
+                 </div>
+              
+              </div>
+
+           </div>
+
+           para seleccionar el div con la clase noticias no podemos utilizar la virulilla (~) ya que no es hijo directo de el div con class container, vendria a ser "el nieto"
+           para seleccionar el div noticias debemos utilizar el signo mayor que (>)
+
+           .container > .noticias{
+               background-color: red;
+           }
+ pseudoclases - pseudoelemetos
+*/
+/* 
+body{
+    background-color: lightcoral;
+}
+
+h1{
+    background-color: lightseagreen;
+}
+
+p{
+    background-color: rebeccapurple;
+} */
+
+#title{
+    background-color: lightseagreen;
+} /* no se debe dar estilos con ID */
+
+.title{
+    background-color: lightseagreen;
+}   /* utilizar la gran mayoria de veces, no hay limite de clases para un elemento  */
+
+.text{
+    background-color: limegreen;
+} /* si otros elementos tienen la clase "text" entonces se les aplicara el estilo que esta dentro de la regla  */
+
+[href]{
+    background-color: limegreen;
+}/* selecciona todos los atributos HREF de la pagina y les da estilo */
+
+[href = "https://www.google.com/?hl=es"]{
+    background-color: magenta;
+} /* selecciona el HREF con la direccion especifica */
+
+[href*="jw"]{
+    background-color: rgb(250, 84, 214);
+} /* busca la palabra en toda la clase y si contiene esa palabra le da estilo */
+
+[class^="color"]{
+    background-color: mediumblue;
+} /* busca si empieza por la palabra  */
+
+[href$="/"]{
+    background-color: red;
+} /* si el atributo termina por esa palabra o signo  */
+
+[lang│="es"]{
+    background-color: lightseagreen;
+}
+
+/* .noticia-1,
+.noticia-2,
+.noticia-3,
+.noticia-4{
+    background-color: mediumseagreen;
+} */
+
+/* div .title-1{
+    background-color: mediumslateblue;
+}
+
+.title-1 + .noticia-1{
+    background-color: lightcoral;
+}
+
+.title-1 ~ .noticia-4{
+    background-color: lightgreen;
+} */
+
+.noticias > .noticia-x{
+    background-color: lightseagreen;
+}

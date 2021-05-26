@@ -1,0 +1,48 @@
+.subtitle{
+    background-color: coral;
+    color: white;
+    text-align: center;
+}
+
+[class$="importante"]{
+    background-color: crimson;
+    text-align: left;
+}
+
+.text{
+    background-color: turquoise;
+    width: 1000px;
+    margin: auto;
+}
+
+[class^=importante]{
+    margin: 0;
+    background-color: tomato;
+    color: white;
+}
+
+.link-noticia-dos{
+    color: rgb(240, 16, 0);
+    text-decoration: none;
+}
+
+.noticia-uno,
+.noticia-tres,
+.noticia-cinco{
+    font-size: 1.2rem;
+}
+
+.referencias{
+    color: seagreen;
+    text-align: center;
+}
+
+.noticia-tres .link-reference,
+.noticia-cinco .link-reference
+{
+    color: rgb(34, 37, 255);
+}
+
+
+
+

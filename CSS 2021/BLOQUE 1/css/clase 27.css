@@ -1,0 +1,36 @@
+/* 
+
+display -> esta propiedad permite cambiar el comportamiento de las cajas, puede hacer qun elemento en linea se convierta a elemento en bloque y viceversa,
+           tiene muchas mas opciones pero eso va aparte.
+           display tiene estos principales valores:
+           none -> hace que el navegador no dibuje el elemento, sin embargo este sigue estando
+           inline -> hace que se transforme a elemento en linea
+           block -> hace que se tranforme a elemento en bloque
+           inline-block -> hace que el elemento sea en linea pero que admita las propiedades de los elementos de bloque
+
+*/
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: gray;
+}
+
+.text{
+    background-color: green;
+    /* display: none;  esto hace que el elemento desaparezca de la vista*/
+    /* display: inline; esto hace que un elemento en bloque pase a ser un elemento en linea  */
+}
+
+.link{
+    /* hicimos un elemento que por naturaleza es en linea a bloque, adquieriendo asi todas las propiedades de un elemento en bloque */
+    /* display: block; */
+    display: inline-block; /* con esta propiedad hacemos que el elemento siga siendo en linea pero que admite los valores de un elemento de bloque */
+    background-color: hotpink;
+    margin-top: 80px;
+    width: 100px;
+}
+

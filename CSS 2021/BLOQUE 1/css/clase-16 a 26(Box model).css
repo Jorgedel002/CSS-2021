@@ -1,0 +1,214 @@
+/* Box model
+
+ El Box model se maneja con 5 propiedades
+   Contenido -> es lo que hay dentro de una caja, en css cualquiera elemento es una caja ya sea en elemento en linea o de bloque
+   Border -> es el borde de la caja
+   Paddging -> es la separacion que hay entre el contenido y la caja
+   Margin -> es la separacion entre las cajas
+   width -> es el ancho de una caja
+   height -> es el alto de una caja
+
+   Elemento en linea -> No se le puede dar medidas con width ni height
+                        No se puede dar margenes superiores ni inferiores pero si a los costados
+   Elemento en bloque -> Puede manejarse el width y el height
+
+   el valor "auto" funciona solamente si hay un widht declarado, en el caso de los elementos en linea esto no hace falta
+
+   Margin -> Es un shorthand para: 
+             margin-top -> margen superior
+             margin-right -> margen derecho
+             margin-bottom -> margen inferior
+             margin-left -> margen izquierdo
+
+   dependiendo de cuantos valores pongamos en el margin se dara los siguientes valores
+           4 valores = top right bottom left - margin: 10px 5px 15px 50px;
+           3 valores = top left/right bottom - margin: 10px 5px 50px
+           2 valores = top/bottom left/right - margin: 10px 5px 
+           1 valor = top/right/bottom/left - margin: 50px
+
+*/
+
+
+/* Malas practicas con margin
+
+usar el selector universal y dar margin: 0; y padding: 0; no sirve de nada, y tendriamos que retocar el margin y el padding de cada elemento,
+por lo cual no es nada practico
+
+utilizar margin: 0 auto; esto lo utilizan para centrar un elemento, pero toca el margin top y bottom. lo mejor seria usar
+margin-left: auto; y margin-right: auto; 
+
+algo que si se puede hacer es utilizar margin: 0; en el body, porque en los navegadores hay un margen en todos los lados de 8 pixeles y los elementos
+no quedan donde nostros querramos
+
+*/
+
+/* 
+
+   padding -> es un shorthand para:
+              padding-top -> separacion superior
+              padding-right -> separacion derecha
+              padding-bottom -> separacion inferior
+              padding-left -> separacion izquierda
+              
+   dependiendo de la cantidad de valores que pongamos a margin se dara los valores en el siguiente orden
+              4 valores = top right bottom left
+              3 valores = top left/right bottom
+              2 valores = top/bottom left/right
+              1 valor = top/right/bottom/left           
+
+
+
+*/
+
+/* 
+
+   border -> es un shorthand para
+             border-width -> ancho del borde
+                             border-top-width
+                             border-right-width
+                             border-bottom-width
+                             border-left-width
+             border-style -> estilo del borde
+                             border-top-style
+                             border-right-style
+                             border-bottom-style
+                             border-left-style
+             border-color -> color del borde
+                             border-top-color
+                             border-right-color
+                             border-bottom-color
+                             border-left-color
+
+
+*/
+
+/* 
+
+  box-sizig: border-box;
+   Con esta propiedad se controla el calculo que hace el navegador a la hora de dar padding,content y border.
+   con esta propiedad se hace automatico el tamaño de la caja en relacion a los bordes el contenido y el padding  mientras exista un tamaño declarado.
+   por ej si tenemos una caja con width 200 y height 200 este es el tamaño maximo que va a  tener la caja. por lo tanto si ponemos padding 50 el width y height se reduce
+   a 150 y si agregaramos un borde de 10px quedaria en 140. de esta manera el caja se mantiene con los 200px de alto y ancho que le dimos en un inicio, sumado a el borde y el padding.
+   si no se utiliza esta propiedad el tamaño inicial aumenta. por ej, width 200 height 200 si agregamos un padding 50 el tamaño de la caja aumenta a 250 y si ponemos un borde de 10 px aumenta a 260px
+   en el caso de border-box lo mejor seria aplicarlo con el selector universal
+   *{
+       border-sizing: border-box;
+   }
+
+*/
+
+/* 
+
+ border-radius: es un shorthand que engloba 4 propiedades: 
+                border-top-left-radius
+                border-top-right-radius
+                border-bottom-right-radius
+                border-bottom-left-radius
+
+   si quisieramos hacer una eliptica lo que debemos hacer es por ej: 
+            border-top-left-radius: 50px 100px; -> con esto se forma una eliptica, el 50 representa el ancho y  100 el alto, si quisieramos poner para todos los lados la manmera de hacerlo seria la siguiente
+            
+            border-radius: 50px/100px; con esto le indicamos que vamos a hacer una eliptica. tambien podemos agregar valor a los demas lados.
+
+*/
+
+/* 
+
+   overflow: esta propiedad controla el contenido de la caja si este se desborda y le dice que tiene que hacer.
+             es un shorthand para overflow-x y overflow-y
+             tiene cuatro valores posibles:
+             visible -> es el valor por defecto
+             hidden -> el contenido que se desborde no se vera, si aplicamos este valor solo en un eje
+                       automaticamente se pondra un scroll en el otro eje
+             scroll -> aparece una barra de scroll donde se lo asignemos. en x o y o ambos
+             auto -> apareceran barras de scroll en el caso de ser necesario          
+
+*/
+body{
+    background-color: #333;
+    color: #fff;
+    margin: 0;
+}
+
+.title{
+    text-align: center;
+}
+
+.block{
+    background-color: lawngreen;
+    width: 200px;
+    height: 200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.inline{
+    background-color: lightseagreen;
+    color: inherit;
+    
+}
+
+.nav{
+    background-color: blue;
+    height: 80px;
+    /* overflow: hidden; */          
+    /* padding-top: 0.1px; */              /* estas son maneras de evitar el colapso de margenes*/
+    /* border-top: 1px solid blue; */
+}
+
+.buttons{
+    background-color: coral;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 40px;
+}
+
+.button{
+    margin-left: 900px;
+    padding: 30px 50px;
+}
+
+.border-radius{
+    width: 400px;
+    height: 400px;
+    background-color: crimson;
+    margin: 60px auto 60px auto;
+    border-radius: 50px 100px 150px 200px; /* el primer valor es para la esquina superior izquierda, el segundo para la esquina superior derecha, el tercero para la esquina inferior derecha y el ultimo para la esquina inferior izquierda */
+}
+
+.eliptica{
+    width: 300px;
+    height: 300px;
+    background-color: chocolate;
+    margin: 60px auto 60px auto;
+    border-radius: 50px 100px 150px 250px / 80px 90px 200px 300px;
+}
+
+.overflow{
+    background-color: chartreuse;
+    width: 400px;
+    height: 400px;
+    margin: 60px auto 60px auto;
+    overflow-X: scroll;
+}
+
+.articulo{
+    width: 450px;
+    height: 480px;
+    margin: 100px auto 100px auto;
+    background-color: white;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.parrafo-1,
+.parrafo-2{
+    background-color: coral;
+    overflow: auto;
+}
+
+[class^="parrafo"] .text{
+    color: black;
+    padding: 14px 20px;
+    margin: 0;
+}

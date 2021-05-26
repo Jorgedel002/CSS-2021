@@ -1,0 +1,37 @@
+/* Fundamentos CSS
+
+Cascada -> funciona siempre que la especificidad soobre el elemento sea la misma 
+
+Herencias -> Heredan los estilos de sus contenedores (Padres, Abuelos etc...) por ej;
+<h1>Hola a todos esto es la <span>herencia</span></h1>
+el h1 por defecto tiene un font-size de 32px, y el span 16px. sin embargo cuando el span esta dentro de un h1 el span hereda el estilo que tenga el h1. en este caso por defecto 32px
+
+Hay elementos que tienen herencia y otras que no, por ejemplo el h1, si intentaramos hacer el caso inverso, poner hun h1 dentro de un span, el h1 no hereda los estilos del span, se mantiene con su estilo por defecto.
+
+si queremos que un elemento herede el valor de una propiedad, pero este elemento no tiene herencia por defecto existe el valor "inherit" de esta manera se fuerza la herencia.
+Si no queremos que el elemento herede el estilo que se da existe "initial"
+
+*/
+
+.title{
+    color: slateblue;
+}
+
+.span{
+    font-size: 1rem;
+}
+
+.herencia{
+    font-size: inherit;
+    display: inherit;
+    font-weight: inherit;
+ } /* con esto hicimos que un h1 dentro de un span herede el font-size, font-weight y display  */
+
+ .text{
+     background-color: lawngreen;
+     color: khaki;
+ }
+
+ .link{
+     color: inherit;
+ }

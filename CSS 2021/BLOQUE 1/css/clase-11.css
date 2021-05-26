@@ -1,0 +1,57 @@
+/* Como funciona CSS?
+
+   Especificidad -> Establece que tan especifico es un selector
+                    para saber que estilo aplicar.
+                    El calculo que realiza el navegador es el siguiente
+
+                    Cascada
+                    Herencia
+*/
+
+
+h1{
+    color: red;
+}
+/* dentro de la especificidad el selector por etiqueta es el mas debil, cualquiera de los siguientes selectores le ganan en especificidad */
+.title{
+    color: blue;
+}
+/* el selector por clase es la mas comun y mas recomendable utilizar para dar estilos, aun asi esta es debil en especificidad frente a selector por id y demas */
+h1.title{
+    color: chartreuse;
+}
+/* el selector combinado de etiqueta y clase gana en espicificidad a los anteriores, este no se suele utilizar por no decir nunca y no se deberia utilizar*/
+#title{
+    color: brown;
+}
+/* el selector por id es el mas fuerte utilizandolo solo, supera hasta el selector de etiqueta y clase, pero no es el mas fuerte en especificidad y no se recomienda utilizar id para dar estilos*/
+h1#title{
+    color: cyan;
+}
+/* el selector combinado de etiqueta e id supera a los anteriores pero no se debe utilizar nunca*/
+h1.title#title{
+    color: darkgreen;
+}
+/* el selector combinado de etiqueta, clase e id es el mas fuerte dentro de la especifidad pero no se debe utilizar nunca*/
+
+/* el estilo en linea es el mas fuerte en cuanto a especificidad se refiere, es decir si tenemos un <h1 style= "color:red;">TITULO</h1> no importa que hayamos utilizado el selector combinado de etiqueta, clase e id ni ningun otro selector, solamente lo supera el siguiente*/
+
+h1{
+    color: red!important;
+}
+
+/* el !important se lleva puesta la especificidad le gana a todos, pero este no se debe utilizar nunca de los jamases ya que en un codigo real de muchas lineas esto es muy perjudicial.
+   
+   se recomienda entonces para no cargarse la especifidad, tener un orden y un trabajo limpio, lo mejor es en la gran mayoria de ocaciones (99%) se debe utilizar los selectores de clase  
+*/
+
+
+
+/* h1.title{
+    color: blue;
+}
+
+h1.title#title{
+    color: seagreen;
+} */
+

@@ -1,0 +1,47 @@
+/* 
+
+text-align -> esta propiedad admite 4 valores
+              left -> alinea el contenido a la izquierda, este esta por defecto en todos los elementos
+              right -> alinea el contenido a la derecha
+              center -> alinea el contenido al centro
+              justify -> ocupa todo el ancho de la caja, no es recomendable usarlo
+
+   Solo sirve para los elementos de bloque.
+   Si queremos centrar el contenido en relacion al body no podemos declarar anchos ya que no se centraria con respecto al body, pero si se centra en relacion a su caja. Si queremos declarar un ancho a el elemento al que le vamos a dar text-aling ya que por X motivo es necesario, pero igualmente queremos centrar el elemento. debemos usar los margenes izquierdo y derecho en auto.           
+
+*/
+
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: lightblue;
+}
+
+.title{
+    text-align: center;
+}
+
+.text{
+    text-align: center;
+}
+/*.imagen{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}  Las imagenes por defecto son elementos inline-block, por lo cual dar text-align center no sirve, ya que esta propiedad solo sirve con los elementos en bloque, asi que podemos usar el display block, si intentamos dar text align center tampoco sirve, porque text align alinea el contenido de la caja, en este caso, la imagen en si ocupa toda la caja. por lo cual debemos utilizar el display block y margenes laterales en auto */
+.img-container{
+    text-align: center;
+} /* en este caso pusimos la imagen dentro de un div, que es un elemento de bloque, al ocupar todo el ancho del body da espacio para utilizar el text align center */
+
+.link{
+    /*display: block;
+    text-align: center;*/
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+} /* en el caso de querer centrar un link debemos transformarlo a elemento en bloque en el caso de que querramos usar el text align center, sino se puede utilizar los margenes laterales en auto */
+

@@ -11,4 +11,5 @@
     font-size: 2rem;
     margin: 100px auto 100px auto;
     border-radius: 50px;
+    box-shadow: 5px 5px 15px rgb(110, 110, 110); /* el primer valor es el left-right de donde se ubicara la sombra, el segundo valor es para el top-bottom de donde se ubicara la sombra el tercer valor es el blur, y el cuarto el color de la sombra  */
 }

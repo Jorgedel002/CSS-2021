@@ -1,0 +1,39 @@
+/*     Position
+
+La propiedad position sirve para posicionar un elemento.
+
+flujo de renderizado -> es el orden en el que aparecen los elementos en el navegador. los elementos aparecen de izquierda a derecha y de arriba a abajo
+
+espacion reservado -> es el espacio que tiene reservado el navegador para un elemento, este puede ser modificado con los margenes padding width height. 
+
+elemento posicionado -> se le llama asi a cualquier elemento que tenga un valor distinto a static 
+
+stackin context -> es el orden en el que se apilan las cajas que se superponen 
+
+al dar la propiedad position se habilitan 5 propiedades para mover el elemento
+
+top -> mueve el elemento desde la parte superior
+left -> mueve el elemento desde la parte izquierda
+bottom -> mueve el elemento desde la parte inferior
+right -> mueve el elemento desde la parte derecha
+z-index -> posiciona un elemento desde el concepto de apilamiento, cuando hay elementos que se superponen le valor z-index determina su posicion    
+
+si a un elemento queremos darle top y a la vez bottom el navegador solamente toma el valor top por encima del bottom y si ponemos left y right el navegador solo toma el left.
+
+los valores posibles que le podemos dar a position son: 
+
+static -> este es el valor por defecto y no admite las propiedades top left bottom right y z-index
+
+relative -> el elemento se mantiene en su posicion por el flujo de renderizado del navegador, si lo queremos mover tendremos que usar las propiedades top left bottom right
+
+absolute -> el elemento se mantiene en su posicion y pierde su espacio en el navegador tambien  pierde sus medidas. si lo movemos utilizara el elemento padre de referencia y si no lo tiene usara el elemento html de referencia
+
+fixed -> el elemento mantiene su posicion y pierde su espacio en el navegador tambien pierde sus medidas, este se quedara fijo en esa posicion aunque hagamos scroll
+
+sticky -> es una mezcla de position relative y fixed. las propiedades top left bottom right pasan a determinar en que momento va a pasar de comportarse como fixed a relative
+
+
+
+
+*/
+

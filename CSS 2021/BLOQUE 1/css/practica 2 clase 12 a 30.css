@@ -3,5 +3,207 @@
 }
 
 body{
-    
+    font-family: NotoSans,Arial,"Arial Unicode MS",sans-serif;
+    background-color: rgb(226, 226, 226);
+}
+
+.header{
+    position: fixed;
+    background-color: rgb(53, 53, 53);
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 937px;
+}
+
+.logo{
+    background-color: rgb(26, 106, 182);
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.logojw{
+    font-size: 30px;
+    color: white;
+    font-weight: 500;
+}
+
+.title{
+    font-size: 20px;
+    text-align: center;
+    font-weight: 500;
+    color: white;
+}
+
+.jw-search{
+    position: absolute;
+    left: -10px;
+    width: 23px;
+    height: 23px;
+    background-color: #fff;
+    outline: .5px solid rgb(160, 160, 160);
+    z-index: 10;
+    cursor: pointer;
+}
+
+.search{
+    position: relative;
+    left: 10px;
+    width: 279px;
+    height: 25px;
+    text-align: center;
+    bottom: 1px;
+    z-index: 1;
+    border: none;
+    outline: none;
+}
+
+.jw-search:hover{
+    background-color: rgb(139, 174, 187);
+}
+
+.lang-sign{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+
+.lang{
+    height: 50px;
+}
+
+.link{
+    color: white;
+    text-decoration: none;
+}
+
+[class*="icon"]{
+    margin-left: 5px;
+    width: 30px;
+    height: 30px;
+    margin-top: 8px;
+}
+
+.text{
+    position: relative;
+    bottom: 8px;
+    left: 20px;
+    font-size: 20px;    
+}
+
+.sign-in{
+    height: 50px;
+    margin-top: 20px;
+}
+
+.lang-hover{
+    cursor: pointer;
+}
+
+.lang-hover:hover{
+    background-color: rgb(109, 109, 109);
+    transition: .5s;
+}
+
+.nav-list{
+    margin-top: 50px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-links{
+    list-style: none;
+    height: 50px;
+    cursor: pointer;
+}
+
+.nav-links:hover{
+    background-color: rgb(109, 109, 109);
+    transition: .5s;
+}
+
+.links{
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    left: 10px;
+    top: 10px;
+    text-transform: uppercase;
+}
+
+.fas{
+    position: relative;
+    margin-left: 5px;
+    font-size: 25px;
+    top: 10px;
+    color: white;
+}
+
+.aplications{
+    height: 220px;
+    margin-top: 40px;
+}
+
+.app-list{
+    padding-left: 40px;
+    list-style: none;
+}
+
+.aplications .app{
+    display: inline-block;
+    width: 70px
+}
+
+.donaciones{
+    margin-left: 74px;
+}
+
+
+.main{
+
+}
+
+.information{ 
+   margin-left: 220px;
+   width: 1790px;
+   height: 500px;
+   overflow: hidden;
+}
+
+.img-1{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title-inf{
+    position: absolute;
+    width: 400px;
+    font-size: 40px;
+    top: 10px;
+    left: 500px;
+    color: white;
+}
+
+.text-inf{
+    position: absolute;
+    width: 200px;
+    top: 240px;
+    left: 500px;
+    font-size: 20px;
+    color: white;
+}
+
+.info-link{
+    position: absolute;
+    top: 380px;
+    left: 500px;
+    background-color: rgb(51, 114, 250);
+    color: white;
+    padding: 10px;
+    font-size: 20px;
 }
